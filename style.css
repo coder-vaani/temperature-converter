@@ -33,11 +33,56 @@ header {
 
 /* main */
 .container {
-    padding: 100px;
+    padding: 10% 5%;
 }
 
 .mini-container {
-    border: 2px solid red;
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    background-color: black;
+    color: white;
+    flex-basis: 50%;
+    padding: 30px;
+}
+
+.title {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.formula {
+    margin: 50px 30px;
+
+}
+
+.form {
+    flex-basis: 50%;
+    padding: 30px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.inputs label {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.inputs input {
+    height: 50px;
+    margin-top: 5px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    border: 2px solid grey;
+    border-radius: 5px;
 }
 
 /* footer */
@@ -54,4 +99,29 @@ header {
 
 .creator {
     color: yellowgreen;
+}
+
+
+/* media queries */
+@media (max-width: 1000px) {
+    .content {
+        display: none;
+    }
+
+    .container {
+        padding: 15% 8%;
+    }
+
+    .mini-container {
+        width: 90%;
+    }
+
+    .form {
+        flex-basis: 100%;
+        padding: 20px 10px;
+    }
+
+    .inputs input {
+        width: 100%;
+    }
 }
